@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TRIVIA 2.0.1</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+    
+</head>
+<body>
+    <header> <!--separamos en lo que queremos que apareca 
+        en la parte de arriba de nuestra web en la cabecera-->
+        <h1>¡¡¡TRIVIA!!!</h1>
+        <h2>Bienvenidx <span id="bienvenido"></span></h2> <!-- se pone un id
+             en un span para poner el nombre del usiario-->
+        <hr><!-- linea-->
+    </header>
+      
+    <section>
+        <!--se pide nombre, la respuesta se envia con input text e input submit-->
+        <div id="pedir-nombre">
+            Ingresa tu nombre: <input type="text" id="nombre" placeholder="ingresa tu nombre">
+            <input type="submit" name="pedirnombre" onclick="obtenerNombre()">
+        </div>
+        <!--se pregunta al usuario si quiere jugar la respuesta se da con dos botones input-->
+        <div id="juegas">
+            <h3>¿Jugamos?</h3>
+            <input type="button" value="si" onclick="siJuego()">
+            <input type="submit" value="no" onclick="noJuego()">
+        </div>
+        <!--se hacen las preguntas al usuario a traves de formularios-->
+        <form id="pregunta-Prompt">
+            <p>¿Qué es un promt?</p>
+            <ul>
+                <li>1. Un juego</li>
+                <li>2. Un elemento de Java</li>
+                <li>3. Un elemento de Javascript</li>
+            </ul>
+            respuesta: <input id="respuesta1" type="number" min ="1" max="3" required="required" autofocus="autofocus">
+            <input type="button" onclick="preguntaPromnt()" value="enviar">        
+        </form>
+
+        <form id="pregunta-js">
+                <p>¿Es lo mismo Java que Javascript?</p>
+                <ul>
+                    <li>1. Si, obvio</li>
+                    <li>2. No, para nada</li>
+                </ul>
+                respuesta: <input id="respuesta2" type="number" min ="1" max="3" required="required" autofocus="autofocus">
+                <input type="button" onclick="preguntaJs()" value="enviar">
+        </form>
+
+        <form id="pregunta-html">
+            <p>¿Que es HTML?</p>
+            <ul>
+                <li>1. Es un lengusje de marcado de texto</li>
+                <li>2. Es un lenguaje de programacion </li>
+                <li>3. Las dos anteriores son validas</li>
+            </ul>
+            respuesta: <input id="respuesta3" type="number" min="1" max="3" required="required" autofocus="autofocus">
+            <input type="button" onclick="preguntaHtml()" value="enviar">
+        </form>
+    </section>
+
+    <!--se usa dos div para mostrar respuestas por separado -->
+    <section id="contenedorRespuestas">
+        <h3>Tus Respuesas Fueron:</h3>
+        <div id = "estiloUno" class="estilo">
+            <hr>
+            <h4>Respuestas correctas</h4>
+            <P id="correctas" ></P>
+        </div>
+
+        <div id = "estiloDos" class="estilo">
+            <hr>
+            <h4>Respuestas Incorrectas</h4>
+            <p id="incorrectas"></p>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

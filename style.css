@@ -1,0 +1,60 @@
+
+/*para ocultar los id y mostrar uno a la vex*/
+#pregunta-Prompt,
+#pregunta-js,
+#pregunta-html,
+#juegas,
+#contenedorRespuestas {
+    display: none;
+}
+
+  /* selecionamos tipo de letra*/
+body {
+    font-family: 'Sunflower', sans-serif;
+ }
+
+   /*damos color de fondo a la parde de bajo de header*/
+section {
+    text-align: center;
+    background-color: coral;
+    max-width: 100%; /*ancho*/
+    height: 100%;
+    border: 5px solid #000000;
+}
+
+
+h3 {
+    font-size: 35px;
+}
+
+h2 {
+    text-align: right;
+}
+
+
+h1 {
+    font-size: 80px;
+    text-align: center;
+ 
+}
+.estilo{
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    font-size: 20px;
+  
+}
+
+#estiloUno {
+    text-align: left;
+    float: left;
+    border: 1px solid #000000;
+    
+}
+
+#estiloDos {
+    text-align: right;
+    float: right;
+    border: 1px solid #000000;
+   
+}
